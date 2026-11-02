@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BANTAY-BAYAN — Where Does the Barangay Disaster Preparedness Fund Go? | Valladolid National High School</title>
+<meta name="description" content="A senior high school research dossier from Valladolid National High School on the barangay disaster preparedness fund: how it is allocated under RA 10121, the records that should show where it went, and the audit and constitutional standards behind it.">
+<meta name="author" content="Valladolid National High School, Senior High School Research Department">
+<style>
+  :root{
+    --navy:#0A192F; --navy-2:#12243D; --gold:#C5A059; --emerald:#006B3C;
+    --bg:#F7F9FB; --card:#FFFFFF; --ink:#0A192F; --body:#4C5A70; --soft:#7C8A9E;
+    --line:#DCE2EA; --line-strong:#C6D0DB;
+    --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:5.5rem;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,p,figure,dl,dd,ul{margin:0}
+  ul{padding:0;list-style:none}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  img,svg{display:block}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  ::selection{background:var(--gold);color:var(--navy)}
+
+  .wrap{width:100%;max-width:72rem;margin:0 auto;padding:0 1.25rem}
+  @media(min-width:640px){.wrap{padding:0 2rem}}
+  .eyebrow{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .h2{margin-top:1rem;font-size:clamp(1.75rem,3.4vw,2.6rem);font-weight:650;line-height:1.1;letter-spacing:-.03em;color:var(--navy)}
+  .lede{margin-top:1.25rem;max-width:34rem;font-size:.9rem;line-height:1.75;color:var(--body)}
+  .block{padding:5rem 0}
+  @media(min-width:640px){.block{padding:7rem 0}}
+  .hanging{padding-left:2.25rem;text-indent:-2.25rem}
+
+  /* header */
+  .site-header{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(10,25,47,.1);background:rgba(247,249,251,.92);backdrop-filter:blur(10px)}
+  .header-row{display:flex;height:72px;align-items:center;justify-content:space-between;gap:1rem}
+  .brand{display:flex;min-width:0;align-items:center;gap:.75rem}
+  .brand-text{min-width:0;line-height:1.25}
+  .brand-school{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--mono);font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
+  .brand-name{display:block;font-size:.85rem;font-weight:650;letter-spacing:-.01em;color:var(--navy)}
+  .seal{flex:0 0 auto;width:40px;height:40px}
+  .nav{display:none;align-items:center;gap:1.75rem}
+  @media(min-width:768px){.nav{display:flex}}
+  .nav a{font-size:.8rem;font-weight:500;color:rgba(10,25,47,.65);transition:color .15s}
+  .nav a:hover{color:var(--navy)}
+  .header-actions{display:flex;flex:0 0 auto;align-items:center;gap:.5rem}
+  .btn{border-radius:2px;padding:.7rem 1rem;font-size:.7rem;font-weight:650;letter-spacing:.12em;text-transform:uppercase;transition:background .15s,color .15s,border-color .15s}
+  .btn-solid{background:var(--navy);color:#F7F9FB;display:none}
+  .btn-solid:hover{background:rgba(10,25,47,.85)}
+  @media(min-width:640px){.btn-solid{display:inline-flex}}
+  .menu-btn{display:inline-flex;width:40px;height:40px;align-items:center;justify-content:center;border:1px solid rgba(10,25,47,.15);border-radius:2px;color:var(--navy)}
+  @media(min-width:768px){.menu-btn{display:none}}
+  .mobile-nav{display:none;border-top:1px solid rgba(10,25,47,.1);background:var(--bg);padding:.75rem 1.25rem}
+  .mobile-nav[data-open="true"]{display:block}
+  .mobile-nav a{display:block;border-bottom:1px solid rgba(10,25,47,.06);padding:.75rem 0;font-size:.9rem;font-weight:500;color:rgba(10,25,47,.8)}
+  .mobile-nav a:last-child{border-bottom:0}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;background:var(--navy);color:#F1F5F9}
+  .hero-grid{position:absolute;inset:0;background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.045) 1px,transparent 1px);background-size:72px 72px;pointer-events:none}
+  .glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 20%,rgba(197,160,89,.09),transparent 55%),radial-gradient(circle at 85% 0%,rgba(0,107,60,.09),transparent 45%)}
+  .rings{position:absolute;top:-8rem;right:-10rem;width:34rem;height:34rem;color:rgba(197,160,89,.25);pointer-events:none}
+  .hero-inner{position:relative;padding-top:4rem;padding-bottom:4rem}
+  @media(min-width:640px){.hero-inner{padding-top:6rem;padding-bottom:5rem}}
+  .kicker{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(241,245,249,.55)}
+  .kicker i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .kicker s{display:inline-block;width:2rem;height:1px;background:rgba(197,160,89,.6);text-decoration:none}
+  .hero h1{margin-top:1.75rem;font-size:clamp(2.15rem,9vw,6.5rem);font-weight:650;line-height:.94;letter-spacing:-.045em}
+  .hero h2{margin-top:1.5rem;max-width:42rem;font-size:1.125rem;font-weight:400;line-height:1.35;color:rgba(241,245,249,.8)}
+  @media(min-width:640px){.hero h2{font-size:1.5rem}}
+  .hero p.body{margin-top:1.25rem;max-width:36rem;font-size:.875rem;line-height:1.75;color:rgba(241,245,249,.55)}
+  @media(min-width:640px){.hero p.body{font-size:1rem}}
+  .hero-cta{margin-top:2.25rem;display:flex;flex-direction:column;gap:.75rem}
+  @media(min-width:640px){.hero-cta{flex-direction:row}}
+  .hero-cta a{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:2px;padding:.8rem 1.5rem;font-size:.875rem;font-weight:650;transition:background .15s,color .15s,border-color .15s}
+  .cta-gold{background:var(--gold);color:var(--navy)}
+  .cta-gold:hover{background:#D5B573}
+  .cta-ghost{border:1px solid rgba(241,245,249,.25);color:rgba(241,245,249,.9);font-weight:500}
+  .cta-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .stats{margin-top:3.5rem;display:grid;gap:1.5rem;border-top:1px solid rgba(241,245,249,.15);padding-top:1.5rem}
+  @media(min-width:640px){.stats{max-width:48rem;grid-template-columns:repeat(3,1fr);gap:2rem}}
+  @media(min-width:640px){.stat+.stat{border-left:1px solid rgba(241,245,249,.1);padding-left:2rem}}
+  .stat dt{font-size:1.875rem;font-weight:650;letter-spacing:-.02em;color:var(--gold)}
+  @media(min-width:640px){.stat dt{font-size:2.25rem}}
+  .stat dd{margin-top:.5rem}
+  .stat b{display:block;font-family:var(--mono);font-size:.58rem;font-weight:400;letter-spacing:.16em;text-transform:uppercase;color:rgba(241,245,249,.7)}
+  .stat small{display:block;margin-top:.25rem;font-size:.75rem;color:rgba(241,245,249,.4)}
+  .hero-note{margin-top:1.25rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(241,245,249,.3)}
+
+  /* study */
+  .study{border-bottom:1px solid rgba(10,25,47,.1);background:var(--bg)}
+  .study-grid{display:grid;gap:3rem}
+  @media(min-width:1024px){.study-grid{grid-template-columns:.85fr 1.15fr;gap:4rem;align-items:start}.study-aside{position:sticky;top:7rem}}
+  .study-note{margin-top:1.5rem;border-left:2px solid var(--gold);padding-left:1rem;font-size:.75rem;line-height:1.75;color:rgba(10,25,47,.55)}
+  .q-label{font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(10,25,47,.4)}
+  .qlist{margin-top:.5rem}
+  .q{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;border-top:1px solid rgba(10,25,47,.1);padding:1.5rem 0}
+  .q:last-child{border-bottom:1px solid rgba(10,25,47,.1)}
+  .q-num{font-family:var(--mono);font-size:.65rem;letter-spacing:.16em;color:var(--gold)}
+  .q h3{font-size:1rem;font-weight:650;letter-spacing:-.01em;color:var(--navy)}
+  @media(min-width:640px){.q h3{font-size:1.125rem}}
+  .q p{margin-top:.5rem;font-size:.875rem;line-height:1.75;color:var(--body)}
+
+  /* fund flow */
+  .fund{position:relative;overflow:hidden;background:var(--navy);color:#F1F5F9}
+  .fund .hero-grid{opacity:.6}
+  .fund-inner{position:relative}
+  .fund p.lede{color:rgba(241,245,249,.6)}
+  .bar{margin-top:3rem;display:flex;height:12px;width:100%;overflow:hidden;border-radius:999px;background:rgba(241,245,249,.1)}
+  .bar span:first-child{width:70%;background:var(--gold)}
+  .bar span:last-child{width:30%;background:var(--emerald)}
+  .legend{margin-top:.75rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(241,245,249,.45)}
+  .legend b{display:inline-flex;align-items:center;gap:.5rem;font-weight:400}
+  .legend i{display:inline-block;width:8px;height:8px}
+  .legend .sw-1{background:var(--gold)}
+  .legend .sw-2{background:var(--emerald)}
+  .breakdown{margin-top:3rem;display:grid;gap:2.5rem}
+  @media(min-width:640px){.breakdown{grid-template-columns:1fr 1fr;column-gap:3rem;row-gap:2.5rem}}
+  .breakdown figure{border-top:1px solid rgba(241,245,249,.15);padding-top:1.25rem}
+  .b-head{display:flex;align-items:baseline;gap:1rem}
+  .b-value{font-size:1.5rem;font-weight:650;letter-spacing:-.02em;color:var(--gold)}
+  @media(min-width:640px){.b-value{font-size:1.875rem}}
+  .breakdown h3{font-size:.8rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:rgba(241,245,249,.85)}
+  .breakdown p{margin-top:.75rem;font-size:.875rem;line-height:1.75;color:rgba(241,245,249,.55)}
+  .fund-src{margin-top:3rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(241,245,249,.3)}
+
+  /* accountability */
+  .acct{border-bottom:1px solid rgba(10,25,47,.1);background:var(--bg)}
+  .acct-head{display:flex;flex-direction:column;gap:1.25rem}
+  @media(min-width:640px){.acct-head{flex-direction:row;align-items:flex-end;justify-content:space-between}}
+  .acct-head .lede{margin-top:0;max-width:22rem}
+  .pillars{margin-top:3rem;display:grid;gap:1.25rem}
+  @media(min-width:768px){.pillars{grid-template-columns:repeat(3,1fr)}}
+  .pillar{display:flex;flex-direction:column;border:1px solid rgba(10,25,47,.1);background:var(--card);padding:1.5rem;transition:border-color .15s}
+  .pillar:hover{border-color:rgba(197,160,89,.6)}
+  .icon-box{display:inline-flex;width:40px;height:40px;align-items:center;justify-content:center;border:1px solid rgba(10,25,47,.15);color:var(--navy)}
+  .pillar .kicker-sm{margin-top:1.25rem;font-family:var(--mono);font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(10,25,47,.45)}
+  .pillar h3{margin-top:.5rem;font-size:1.125rem;font-weight:650;letter-spacing:-.01em;color:var(--navy)}
+  .pillar p{margin-top:.75rem;font-size:.875rem;line-height:1.75;color:var(--body)}
+  .pillar a{margin-top:1.5rem;display:inline-flex;align-items:center;gap:.375rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);transition:color .15s}
+  .pillar a:hover{color:var(--navy)}
+
+  /* references */
+  .refs{background:#EDF1F5}
+  .refs-head{display:flex;flex-direction:column;gap:1.25rem}
+  @media(min-width:1024px){.refs-head{flex-direction:row;align-items:flex-end;justify-content:space-between}}
+  .refs-meta{font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(10,25,47,.45)}
+  .toolbar{margin-top:2.5rem;border:1px solid rgba(10,25,47,.12);background:var(--card);padding:1rem}
+  @media(min-width:640px){.toolbar{padding:1.25rem}}
+  .search-row{display:flex;align-items:center;gap:.75rem;border-bottom:1px solid rgba(10,25,47,.1);padding-bottom:1rem}
+  .search-row svg{flex:0 0 auto;color:rgba(10,25,47,.35)}
+  .search-row input{width:100%;border:0;background:transparent;font-family:var(--font);font-size:.875rem;color:var(--navy);outline:none}
+  .search-row input::placeholder{color:rgba(10,25,47,.35)}
+  .clear-btn{display:inline-flex;width:24px;height:24px;flex:0 0 auto;align-items:center;justify-content:center;border:1px solid rgba(10,25,47,.15);border-radius:50%;color:rgba(10,25,47,.5);transition:border-color .15s,color .15s}
+  .clear-btn:hover{border-color:var(--gold);color:var(--navy)}
+  .clear-btn[hidden]{display:none}
+  .toolbar-row{margin-top:1rem;display:flex;flex-direction:column;gap:1rem}
+  @media(min-width:1024px){.toolbar-row{flex-direction:row;align-items:center;justify-content:space-between}}
+  .chips{display:flex;flex-wrap:wrap;gap:.5rem}
+  .chip{display:inline-flex;align-items:center;gap:.375rem;border:1px solid rgba(10,25,47,.15);border-radius:999px;padding:.375rem .75rem;font-family:var(--mono);font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(10,25,47,.55);transition:border-color .15s,color .15s,background .15s}
+  .chip:hover{border-color:var(--gold);color:var(--navy)}
+  .chip b{font-weight:400;color:rgba(10,25,47,.35)}
+  .chip[aria-pressed="true"]{border-color:var(--navy);background:var(--navy);color:#F7F9FB}
+  .chip[aria-pressed="true"] b{color:var(--gold)}
+  .views{display:flex;flex:0 0 auto;align-self:flex-start;align-items:center;gap:.25rem;border:1px solid rgba(10,25,47,.15);border-radius:999px;padding:.25rem}
+  @media(min-width:1024px){.views{align-self:auto}}
+  .view-btn{display:inline-flex;align-items:center;gap:.375rem;border-radius:999px;padding:.375rem .75rem;font-family:var(--mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(10,25,47,.55);transition:background .15s,color .15s}
+  .view-btn:hover{color:var(--navy)}
+  .view-btn[aria-pressed="true"]{background:var(--navy);color:#F7F9FB}
+  .count{margin-top:1.5rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(10,25,47,.45)}
+  .cards{margin-top:1rem;display:grid;gap:1.25rem}
+  @media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+  .card{position:relative;display:flex;flex-direction:column;border:1px solid rgba(10,25,47,.1);background:var(--card);padding:1.5rem;transition:border-color .15s}
+  .card:hover{border-color:rgba(197,160,89,.6)}
+  .card::before{content:"";position:absolute;left:0;top:0;width:2.5rem;height:1px;background:var(--gold)}
+  .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+  .num{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:rgba(10,25,47,.3)}
+  .badge{border:1px solid rgba(10,25,47,.15);padding:.125rem .5rem;font-family:var(--mono);font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(10,25,47,.5)}
+  .card h3{margin-top:1rem;font-size:1rem;font-weight:650;line-height:1.35;letter-spacing:-.01em;color:var(--navy)}
+  .card-meta{margin-top:.25rem;font-family:var(--mono);font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:var(--body)}
+  .card p.blurb{margin-top:1rem;font-size:.875rem;line-height:1.75;color:var(--body)}
+  .card .apa{border-top:1px solid rgba(10,25,47,.1);margin-top:1.25rem;padding-top:1rem;font-size:.72rem;line-height:1.7;color:rgba(10,25,47,.45)}
+  .apa a{word-break:break-all;text-decoration:underline;text-decoration-color:rgba(10,25,47,.3);text-underline-offset:2px}
+  .apa a:hover{text-decoration-color:var(--gold)}
+  .card-foot{margin-top:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding-top:.25rem}
+  .copy{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(10,25,47,.15);border-radius:2px;padding:.5rem .75rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(10,25,47,.6);transition:border-color .15s,color .15s,background .15s}
+  .copy:hover{border-color:var(--gold);color:var(--navy)}
+  .copy.is-copied{border-color:rgba(4,108,78,.4);background:rgba(4,108,78,.06);color:#046C4E}
+  .source-link{display:inline-flex;align-items:center;gap:.375rem;font-family:var(--mono);font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(10,25,47,.45);transition:color .15s}
+  .source-link:hover{color:var(--gold)}
+  .list{margin-top:1rem;border-bottom:1px solid rgba(10,25,47,.1)}
+  .list-row{display:grid;gap:.75rem;border-top:1px solid rgba(10,25,47,.1);padding:1.5rem 0}
+  @media(min-width:640px){.list-row{grid-template-columns:auto 1fr auto;align-items:start;gap:1.5rem}.list-row .copy{justify-self:end}}
+  .list-row .num{padding-top:.25rem}
+  .list-badge{font-family:var(--mono);font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(10,25,47,.4)}
+  .list-row .apa{margin-top:.5rem;font-size:.875rem;line-height:1.9;color:rgba(10,25,47,.85)}
+  .empty{margin-top:1rem;border:1px dashed rgba(10,25,47,.2);background:var(--card);padding:4rem 1.5rem;text-align:center}
+  .empty h3{font-size:1rem;font-weight:650;color:var(--navy)}
+  .empty p{margin:0 auto;margin-top:.5rem;max-width:22rem;font-size:.875rem;line-height:1.75;color:var(--body)}
+  .reset{margin-top:1.5rem;display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(10,25,47,.2);border-radius:2px;padding:.5rem 1rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(10,25,47,.7);transition:border-color .15s,color .15s}
+  .reset:hover{border-color:var(--gold);color:var(--navy)}
+
+  /* footer */
+  .site-footer{border-top:2px solid var(--gold);background:var(--navy);color:#F1F5F9}
+  .footer-inner{padding-top:3.5rem;padding-bottom:3.5rem}
+  .foot-grid{display:grid;gap:2.5rem}
+  @media(min-width:768px){.foot-grid{grid-template-columns:1.5fr 1fr 1fr}}
+  .foot-brand{display:flex;align-items:center;gap:.75rem}
+  .foot-brand .seal{width:44px;height:44px}
+  .foot-school{font-family:var(--mono);font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(241,245,249,.5)}
+  .foot-name{font-size:.875rem;font-weight:650;letter-spacing:-.01em}
+  .foot-blurb{margin-top:1.25rem;max-width:22rem;font-size:.875rem;line-height:1.75;color:rgba(241,245,249,.5)}
+  .foot-tag{margin-top:1rem;font-size:.875rem;font-style:italic;color:var(--gold)}
+  .foot-title{font-family:var(--mono);font-size:.55rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .foot-links{margin-top:1rem;display:grid;gap:.625rem;font-size:.875rem}
+  .foot-links a{color:rgba(241,245,249,.6);transition:color .15s}
+  .foot-links a:hover{color:var(--gold)}
+  .foot-ext{display:inline-flex;align-items:center;gap:.375rem}
+  .legal{margin-top:3rem;border-top:1px solid rgba(241,245,249,.1);padding-top:1.5rem}
+  .legal-dept{font-family:var(--mono);font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(197,160,89,.8)}
+  .legal p{margin-top:.5rem;font-size:.75rem;color:rgba(241,245,249,.4)}
+  .legal .disclaimer{max-width:42rem;line-height:1.75;color:rgba(241,245,249,.3)}
+
+  /* toast */
+  .toast{position:fixed;bottom:1rem;left:1rem;right:1rem;z-index:80;border:1px solid rgba(10,25,47,.12);border-left:4px solid var(--emerald);border-radius:2px;background:var(--card);padding:.875rem 1rem;box-shadow:0 12px 32px rgba(10,25,47,.16)}
+  @media(min-width:640px){.toast{left:auto;right:1.5rem;bottom:1.5rem;min-width:18rem;max-width:24rem}}
+  .toast[hidden]{display:none}
+  .toast b{display:block;font-size:.875rem;font-weight:650;color:var(--navy)}
+  .toast span{display:block;margin-top:.25rem;font-size:.75rem;color:var(--body)}
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition-duration:.001ms!important;animation-duration:.001ms!important}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top">
+      <svg class="seal" viewBox="0 0 100 100" role="img" aria-label="Seal of Valladolid National High School">
+        <circle cx="50" cy="50" r="48.5" fill="#0A192F" stroke="#C5A059" stroke-width="1.6"/>
+        <circle cx="50" cy="50" r="42" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8"/>
+        <circle cx="50" cy="50" r="29.5" fill="none" stroke="#C5A059" stroke-width="0.6" opacity="0.55"/>
+        <defs>
+          <path id="sealTop" d="M16,50 A34,34 0 1,1 84,50" fill="none"/>
+          <path id="sealBottom" d="M17,50 A33,33 0 1,0 83,50" fill="none"/>
+        </defs>
+        <text font-family="system-ui,Arial,sans-serif" font-size="6.4" font-weight="600" fill="#C5A059" letter-spacing="0.55">
+          <textPath href="#sealTop" startOffset="50%" text-anchor="middle">VALLADOLID NHS</textPath>
+        </text>
+        <text font-family="system-ui,Arial,sans-serif" font-size="5.4" fill="#C5A059" letter-spacing="0.8" opacity="0.9">
+          <textPath href="#sealBottom" startOffset="50%" text-anchor="middle">NEGROS OCCIDENTAL</textPath>
+        </text>
+        <text x="50" y="55.5" text-anchor="middle" font-family="system-ui,Arial,sans-serif" font-size="16" font-weight="700" fill="#F1F5F9" letter-spacing="0.4">VNHS</text>
+        <path d="M43 62h14" stroke="#C5A059" stroke-width="0.8"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-school">Valladolid National High School</span>
+        <span class="brand-name">BANTAY-BAYAN</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#study">The Study</a>
+      <a href="#fund-flow">Fund Flow</a>
+      <a href="#accountability">Accountability</a>
+      <a href="#references">References</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-solid" href="#references">Bibliography</a>
+      <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Primary mobile" data-open="false">
+    <a href="#study">The Study</a>
+    <a href="#fund-flow">Fund Flow</a>
+    <a href="#accountability">Accountability</a>
+    <a href="#references">References</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="glow" aria-hidden="true"></div>
+    <svg class="rings" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+      <circle cx="200" cy="200" r="52" stroke="currentColor" stroke-width="0.7"/>
+      <circle cx="200" cy="200" r="74" stroke="currentColor" stroke-width="0.7"/>
+      <circle cx="200" cy="200" r="96" stroke="currentColor" stroke-width="0.7"/>
+      <circle cx="200" cy="200" r="118" stroke="currentColor" stroke-width="0.7"/>
+      <circle cx="200" cy="200" r="140" stroke="currentColor" stroke-width="0.7"/>
+      <circle cx="200" cy="200" r="162" stroke="currentColor" stroke-width="0.7"/>
+      <circle cx="200" cy="200" r="184" stroke="currentColor" stroke-width="0.7"/>
+      <circle cx="200" cy="200" r="206" stroke="currentColor" stroke-width="0.7"/>
+      <path d="M200 12v376M12 200h376" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+    </svg>
+
+    <div class="wrap hero-inner">
+      <div class="kicker">
+        <i aria-hidden="true"></i>
+        <span>Political Science Project</span>
+        <s aria-hidden="true"></s>
+        <span>Valladolid, Negros Occidental</span>
+      </div>
+
+      <h1>BANTAY-BAYAN</h1>
+      <h2>Before the disaster strikes — where does the barangay disaster preparedness fund go?</h2>
+      <p class="body">A research dossier on the money set aside for disaster preparedness: how it is computed, what the law requires it to fund, and the records that should let every resident see where it went.</p>
+
+      <div class="hero-cta">
+        <a class="cta-gold" href="#references">
+          Open the bibliography
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="cta-ghost" href="#study">Read the study</a>
+      </div>
+
+      <dl class="stats">
+        <div class="stat">
+          <dt>5%</dt>
+          <dd><b>Minimum local fund</b><small>of estimated regular revenues</small></dd>
+        </div>
+        <div class="stat">
+          <dt>30%</dt>
+          <dd><b>Quick response fund</b><small>standing fund for relief</small></dd>
+        </div>
+        <div class="stat">
+          <dt>70%</dt>
+          <dd><b>Preparedness share</b><small>programs, projects, activities</small></dd>
+        </div>
+      </dl>
+      <p class="hero-note">Allocation under RA 10121, Section 21</p>
+    </div>
+  </section>
+
+  <section class="block study" id="study">
+    <div class="wrap study-grid">
+      <div class="study-aside">
+        <p class="eyebrow">01 — The Study</p>
+        <h2 class="h2">Following the money from budget line to barangay street.</h2>
+        <p class="lede">Disaster preparedness is financed before anything happens. This study looks at that quiet part of local governance: the fund every local government unit is required to keep for disasters, what the law says it must pay for, and whether the public record lets a resident follow the peso.</p>
+        <p class="study-note">Reference base: the DRRM Act and its implementing rules, Commission on Audit guidance, the Ombudsman Act, and the 1987 Constitution.</p>
+      </div>
+
+      <div>
+        <p class="q-label">Focus questions</p>
+        <div class="qlist">
+          <article class="q">
+            <span class="q-num">01</span>
+            <div>
+              <h3>How is the fund allocated?</h3>
+              <p>Which portion of the local budget is set aside for disaster preparedness, and how is the barangay share computed, released, and carried over?</p>
+            </div>
+          </article>
+          <article class="q">
+            <span class="q-num">02</span>
+            <div>
+              <h3>What records should show where it went?</h3>
+              <p>Which plans, vouchers, procurement documents, and reports are required to trace an expenditure from approval to delivery?</p>
+            </div>
+          </article>
+          <article class="q">
+            <span class="q-num">03</span>
+            <div>
+              <h3>Who can actually see it?</h3>
+              <p>How visible is that paper trail to the residents it protects — before a disaster, not after the audit?</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block fund" id="fund-flow">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="wrap fund-inner">
+      <p class="eyebrow">02 — Fund Flow</p>
+      <h2 class="h2" style="color:#F1F5F9">Where the money is supposed to go.</h2>
+      <p class="lede">Republic Act No. 10121 does not leave the local disaster fund to discretion. It sets the size of the fund, splits it between standing response money and preparedness work, and tells the local government unit what to do with whatever is left over.</p>
+
+      <div class="bar" role="img" aria-label="Seventy percent preparedness and mitigation, thirty percent quick response">
+        <span></span><span></span>
+      </div>
+      <div class="legend">
+        <b><i class="sw-1" aria-hidden="true"></i>70% Preparedness &amp; mitigation</b>
+        <b><i class="sw-2" aria-hidden="true"></i>30% Quick response</b>
+      </div>
+
+      <div class="breakdown">
+        <figure>
+          <div class="b-head"><span class="b-value">5%</span><h3>The source</h3></div>
+          <p>Local government units must set aside not less than five percent of their estimated revenue from regular sources as the Local Disaster Risk Reduction and Management Fund.</p>
+        </figure>
+        <figure>
+          <div class="b-head"><span class="b-value">30%</span><h3>Quick Response Fund</h3></div>
+          <p>Thirty percent of that fund is held as a stand-by fund for relief and recovery in areas affected by disasters.</p>
+        </figure>
+        <figure>
+          <div class="b-head"><span class="b-value">70%</span><h3>Preparedness and mitigation</h3></div>
+          <p>The remaining seventy percent supports disaster prevention, mitigation, and preparedness programs, projects, and activities — training, equipment, early warning, and pre-disaster planning.</p>
+        </figure>
+        <figure>
+          <div class="b-head"><span class="b-value">5 yrs</span><h3>Unexpended balances</h3></div>
+          <p>Amounts left unutilized accrue to a special trust fund for disaster risk reduction and management, available to the local government unit for the next five years.</p>
+        </figure>
+      </div>
+
+      <p class="fund-src">Source: RA 10121, Section 21; Implementing Rules and Regulations (2010)</p>
+    </div>
+  </section>
+
+  <section class="block acct" id="accountability">
+    <div class="wrap">
+      <div class="acct-head">
+        <div>
+          <p class="eyebrow">03 — Accountability</p>
+          <h2 class="h2" style="max-width:34rem">Three offices stand behind every receipt.</h2>
+        </div>
+        <p class="lede">A disaster fund is only as strong as the accountability that surrounds it. These are the three authorities the study reads it against.</p>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar">
+          <span class="icon-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.4-3 7.4-7 9.5-4-2.1-7-5.1-7-9.5V6l7-3z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
+          </span>
+          <p class="kicker-sm">Constitutional audit</p>
+          <h3>Commission on Audit</h3>
+          <p>The COA audits every peso that passes through government. Its mandate lets it examine records, disallow irregular expenditures, and publish what it finds — which is why its guidance anchors this study.</p>
+          <a href="https://www.coa.gov.ph/" target="_blank" rel="noreferrer">
+            COA mandate
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </article>
+
+        <article class="pillar">
+          <span class="icon-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v17M7 21h10M12 7l-5.5 2 2.5 4.5a3 3 0 0 1-5.5 0L6 9M12 7l5.5 2L15 13.5a3 3 0 0 0 5.5 0L18 9"/></svg>
+          </span>
+          <p class="kicker-sm">Investigative power</p>
+          <h3>Office of the Ombudsman</h3>
+          <p>Republic Act No. 6770 created the Office of the Ombudsman to investigate and prosecute public officers whose acts betray the public trust.</p>
+          <a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/2100" target="_blank" rel="noreferrer">
+            RA 6770
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </article>
+
+        <article class="pillar">
+          <span class="icon-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 21V10M20 21V10M2.5 10L12 4.5 21.5 10M8 21v-7M12 21v-7M16 21v-7"/></svg>
+          </span>
+          <p class="kicker-sm">Public disclosure</p>
+          <h3>The 1987 Constitution</h3>
+          <p>Article II, Section 28 adopts a policy of full public disclosure of all transactions involving public interest, and Article XI, Section 1 reminds every officer that public office is a public trust.</p>
+          <a href="https://officialgazette.gov.ph/constitutions/1987-constitution/" target="_blank" rel="noreferrer">
+            1987 Constitution
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block refs" id="references">
+    <div class="wrap">
+      <div class="refs-head">
+        <div>
+          <p class="eyebrow">04 — References</p>
+          <h2 class="h2">Reference bibliography</h2>
+          <p class="lede">Six primary sources in APA 7th edition. Search them, filter by category, switch between card and list views, and copy any citation ready to paste.</p>
+        </div>
+        <p class="refs-meta">6 sources · APA 7th ed.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-row">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="search" type="search" aria-label="Search references" placeholder="Search by keyword, agency, or legal act…" autocomplete="off">
+          <button class="clear-btn" type="button" id="clearBtn" aria-label="Clear search" hidden>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+
+        <div class="toolbar-row">
+          <div class="chips" role="group" aria-label="Filter by category" id="chips">
+            <button class="chip" type="button" data-cat="all" aria-pressed="true">All References <b>6</b></button>
+            <button class="chip" type="button" data-cat="coa" aria-pressed="false">COA Guidelines <b>2</b></button>
+            <button class="chip" type="button" data-cat="irr" aria-pressed="false">Implementing Rules <b>1</b></button>
+            <button class="chip" type="button" data-cat="ra" aria-pressed="false">Republic Acts <b>2</b></button>
+            <button class="chip" type="button" data-cat="constitution" aria-pressed="false">Constitution <b>1</b></button>
+          </div>
+
+          <div class="views" role="group" aria-label="Display style" id="views">
+            <button class="view-btn" type="button" data-view="card" aria-pressed="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              Card View
+            </button>
+            <button class="view-btn" type="button" data-view="list" aria-pressed="false">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+              APA List View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <p class="count" id="count" aria-live="polite">Showing 6 of 6 sources</p>
+      <div id="results"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg class="seal" viewBox="0 0 100 100" role="img" aria-label="Seal of Valladolid National High School">
+            <circle cx="50" cy="50" r="48.5" fill="#0A192F" stroke="#C5A059" stroke-width="1.6"/>
+            <circle cx="50" cy="50" r="42" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8"/>
+            <circle cx="50" cy="50" r="29.5" fill="none" stroke="#C5A059" stroke-width="0.6" opacity="0.55"/>
+            <defs>
+              <path id="sealTopFooter" d="M16,50 A34,34 0 1,1 84,50" fill="none"/>
+              <path id="sealBottomFooter" d="M17,50 A33,33 0 1,0 83,50" fill="none"/>
+            </defs>
+            <text font-family="system-ui,Arial,sans-serif" font-size="6.4" font-weight="600" fill="#C5A059" letter-spacing="0.55">
+              <textPath href="#sealTopFooter" startOffset="50%" text-anchor="middle">VALLADOLID NHS</textPath>
+            </text>
+            <text font-family="system-ui,Arial,sans-serif" font-size="5.4" fill="#C5A059" letter-spacing="0.8" opacity="0.9">
+              <textPath href="#sealBottomFooter" startOffset="50%" text-anchor="middle">NEGROS OCCIDENTAL</textPath>
+            </text>
+            <text x="50" y="55.5" text-anchor="middle" font-family="system-ui,Arial,sans-serif" font-size="16" font-weight="700" fill="#F1F5F9" letter-spacing="0.4">VNHS</text>
+            <path d="M43 62h14" stroke="#C5A059" stroke-width="0.8"/>
+          </svg>
+          <div>
+            <p class="foot-school">Valladolid National High School</p>
+            <p class="foot-name">BANTAY-BAYAN</p>
+          </div>
+        </div>
+        <p class="foot-blurb">Bantay-Bayan is a community watch over public money: a research project on the barangay disaster preparedness fund, and on the records that should make it visible.</p>
+        <p class="foot-tag">Continuing Commitment to Excellence</p>
+      </div>
+
+      <div>
+        <h3 class="foot-title">Sections</h3>
+        <div class="foot-links">
+          <a href="#study">The Study</a>
+          <a href="#fund-flow">Fund Flow</a>
+          <a href="#accountability">Accountability</a>
+          <a href="#references">References</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="foot-title">Primary sources</h3>
+        <div class="foot-links">
+          <a class="foot-ext" href="https://www.coa.gov.ph/" target="_blank" rel="noreferrer">Commission on Audit
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+          <a class="foot-ext" href="https://www.officialgazette.gov.ph/" target="_blank" rel="noreferrer">Official Gazette
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+          <a class="foot-ext" href="https://lawphil.net/" target="_blank" rel="noreferrer">The LawPhil Project
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="legal">
+      <p class="legal-dept">Developed by Jebriel John V. Acuhin</p>
+      <p>© 2026 Valladolid National High School. All rights reserved.</p>
+      <p class="disclaimer">An academic research project. Not an official publication of the Commission on Audit, the Office of Civil Defense, or any government agency.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden>
+  <b>Citation copied</b>
+  <span id="toastDesc"></span>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var REFERENCES = [
+    {
+      id: "coa-charter", category: "coa", badge: "COA", label: "COA Citizens' Charter 2024",
+      org: "Commission on Audit", year: "2024", title: "COA citizens' charter 2024", publisher: "",
+      url: "https://www.coa.gov.ph/wp-content/uploads/transparency/citizen_charter/COA_Citizens_Charter__2024.pdf",
+      blurb: "The Commission's published service standards: who handles audit requests, what documents are required, and how long each step should take."
+    },
+    {
+      id: "ra10121-irr", category: "irr", badge: "IRR", label: "RA 10121 Implementing Rules",
+      org: "Office of Civil Defense", year: "2010", title: "Implementing rules and regulations of Republic Act No. 10121",
+      publisher: "Supreme Court E-Library", url: "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/10/58073",
+      blurb: "The rules that translate the DRRM Act into practice, including how the local fund is computed, allocated, and reported."
+    },
+    {
+      id: "constitution-1987", category: "constitution", badge: "Constitution", label: "The 1987 Constitution",
+      org: "Republic of the Philippines", year: "1987", title: "The 1987 Constitution of the Republic of the Philippines",
+      publisher: "Official Gazette", url: "https://officialgazette.gov.ph/constitutions/1987-constitution/",
+      blurb: "Article II, Section 28 on full public disclosure, and Article XI, Section 1 on public office as a public trust."
+    },
+    {
+      id: "ra6770", category: "ra", badge: "Republic Act", label: "RA 6770 — The Ombudsman Act",
+      org: "Republic of the Philippines", year: "1989", title: "Republic Act No. 6770: The Ombudsman Act of 1989",
+      publisher: "Supreme Court E-Library", url: "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/2100",
+      blurb: "Creates the Office of the Ombudsman and defines its power to investigate and prosecute public officers."
+    },
+    {
+      id: "ra10121", category: "ra", badge: "Republic Act", label: "RA 10121 — The DRRM Act",
+      org: "Republic of the Philippines", year: "2010", title: "Republic Act No. 10121: Philippine Disaster Risk Reduction and Management Act of 2010",
+      publisher: "The LawPhil Project", url: "https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html",
+      blurb: "Section 21 is the provision this study turns on: the five percent local fund, the quick response share, and the trust fund for unexpended balances."
+    },
+    {
+      id: "coa-mandate", category: "coa", badge: "COA", label: "COA Mandate and Powers",
+      org: "Commission on Audit", year: "n.d.", title: "Mandate and constitutional powers", publisher: "",
+      url: "https://www.coa.gov.ph/",
+      blurb: "The Commission's own statement of its constitutional mandate, jurisdiction, and auditing powers over public funds."
+    }
+  ];
+
+  REFERENCES.forEach(function (reference, index) {
+    reference.number = index + 1;
+    reference.plain = reference.org + ". (" + reference.year + "). " + reference.title + "." +
+      (reference.publisher ? " " + reference.publisher + "." : "") + " " + reference.url;
+  });
+
+  var state = { query: "", category: "all", view: "card", copiedId: null };
+  var copyTimer = null;
+
+  var resultsEl = document.getElementById("results");
+  var countEl = document.getElementById("count");
+  var searchEl = document.getElementById("search");
+  var clearBtn = document.getElementById("clearBtn");
+  var toastEl = document.getElementById("toast");
+  var toastDesc = document.getElementById("toastDesc");
+  var menuBtn = document.getElementById("menuBtn");
+  var mobileNav = document.getElementById("mobileNav");
+  var toastTimer = null;
+
+  function esc(value) {
+    return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function apaMarkup(reference, className) {
+    var pub = reference.publisher ? " " + esc(reference.publisher) + "." : "";
+    return '<p class="apa hanging ' + className + '">' + esc(reference.org) + ". (" + esc(reference.year) + "). <em>" +
+      esc(reference.title) + "</em>." + pub + ' <a href="' + esc(reference.url) + '" target="_blank" rel="noreferrer">' +
+      esc(reference.url) + "</a></p>";
+  }
+
+  var copyIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="1"/><path d="M5 15V4a1 1 0 0 1 1-1h10"/></svg>';
+  var checkIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>';
+
+  function copyButton(reference) {
+    var copied = state.copiedId === reference.id;
+    return '<button class="copy' + (copied ? " is-copied" : "") + '" type="button" data-copy="' + esc(reference.id) + '"' +
+      ' aria-label="' + (copied ? "Citation copied: " : "Copy citation: ") + esc(reference.label) + '">' +
+      (copied ? checkIcon : copyIcon) + (copied ? "Copied" : "Copy Citation") + "</button>";
+  }
+
+  function cardMarkup(reference) {
+    return '<article class="card">' +
+      '<div class="card-top"><span class="num">' + String(reference.number).padStart(2, "0") + '</span>' +
+      '<span class="badge">' + esc(reference.badge) + "</span></div>" +
+      "<h3>" + esc(reference.label) + "</h3>" +
+      '<p class="card-meta">' + esc(reference.org) + " · " + esc(reference.year) + "</p>" +
+      '<p class="blurb">' + esc(reference.blurb) + "</p>" +
+      apaMarkup(reference, "") +
+      '<div class="card-foot">' + copyButton(reference) +
+      '<a class="source-link" href="' + esc(reference.url) + '" target="_blank" rel="noreferrer" aria-label="Open source: ' + esc(reference.label) + '">Source' +
+      '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>' +
+      "</div></article>";
+  }
+
+  function listMarkup(reference) {
+    return '<article class="list-row"><span class="num">' + String(reference.number).padStart(2, "0") + "</span>" +
+      "<div><p class=\"list-badge\">" + esc(reference.badge) + "</p>" + apaMarkup(reference, "") + "</div>" +
+      copyButton(reference) + "</article>";
+  }
+
+  function filtered() {
+    var term = state.query.trim().toLowerCase();
+    return REFERENCES.filter(function (reference) {
+      var matchesCategory = state.category === "all" || reference.category === state.category;
+      var haystack = [reference.plain, reference.label, reference.blurb, reference.badge].join(" ").toLowerCase();
+      return matchesCategory && (!term || haystack.indexOf(term) !== -1);
+    });
+  }
+
+  function render() {
+    var results = filtered();
+
+    countEl.textContent = "Showing " + results.length + " of " + REFERENCES.length + " sources";
+    clearBtn.hidden = state.query.length === 0;
+
+    if (!results.length) {
+      resultsEl.innerHTML = '<div class="empty"><h3>No sources match that search.</h3>' +
+        '<p>Try a shorter term such as “COA”, “RA 10121”, or “Constitution”.</p>' +
+        '<button class="reset" type="button" id="resetBtn">Reset filters</button></div>';
+      var resetBtn = document.getElementById("resetBtn");
+      if (resetBtn) resetBtn.addEventListener("click", resetFilters);
+      return;
+    }
+
+    if (state.view === "card") {
+      resultsEl.innerHTML = '<div class="cards">' + results.map(cardMarkup).join("") + "</div>";
+    } else {
+      resultsEl.innerHTML = '<div class="list">' + results.map(listMarkup).join("") + "</div>";
+    }
+  }
+
+  function resetFilters() {
+    state.query = "";
+    state.category = "all";
+    searchEl.value = "";
+    document.querySelectorAll("#chips .chip").forEach(function (chip) {
+      chip.setAttribute("aria-pressed", chip.dataset.cat === "all" ? "true" : "false");
+    });
+    render();
+  }
+
+  function showToast(reference) {
+    toastDesc.textContent = reference.org + " (" + reference.year + ") · APA 7th edition";
+    toastEl.hidden = false;
+    window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(function () { toastEl.hidden = true; }, 3200);
+  }
+
+  function markCopied(id) {
+    state.copiedId = id;
+    document.querySelectorAll("[data-copy]").forEach(function (button) {
+      var isTarget = button.dataset.copy === id;
+      var reference = REFERENCES.filter(function (item) { return item.id === button.dataset.copy; })[0];
+      button.classList.toggle("is-copied", isTarget);
+      button.innerHTML = (isTarget ? checkIcon : copyIcon) + (isTarget ? "Copied" : "Copy Citation");
+      if (reference) {
+        button.setAttribute("aria-label", (isTarget ? "Citation copied: " : "Copy citation: ") + reference.label);
+      }
+    });
+  }
+
+  function writeClipboard(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text).then(function () { return true; }, function () { return legacyCopy(text); });
+    }
+    return Promise.resolve(legacyCopy(text));
+  }
+
+  function legacyCopy(text) {
+    var area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.top = "0";
+    area.style.left = "-9999px";
+    document.body.appendChild(area);
+    area.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (error) { ok = false; }
+    document.body.removeChild(area);
+    return ok;
+  }
+
+  function handleCopy(id) {
+    var reference = REFERENCES.filter(function (item) { return item.id === id; })[0];
+    if (!reference) return;
+    writeClipboard(reference.plain).then(function () {
+      markCopied(id);
+      showToast(reference);
+      window.clearTimeout(copyTimer);
+      copyTimer = window.setTimeout(function () {
+        state.copiedId = null;
+        markCopied(null);
+      }, 2200);
+    });
+  }
+
+  resultsEl.addEventListener("click", function (event) {
+    var button = event.target.closest("[data-copy]");
+    if (button) handleCopy(button.dataset.copy);
+  });
+
+  searchEl.addEventListener("input", function () {
+    state.query = searchEl.value;
+    render();
+  });
+
+  clearBtn.addEventListener("click", function () {
+    state.query = "";
+    searchEl.value = "";
+    searchEl.focus();
+    render();
+  });
+
+  document.getElementById("chips").addEventListener("click", function (event) {
+    var chip = event.target.closest("[data-cat]");
+    if (!chip) return;
+    state.category = chip.dataset.cat;
+    document.querySelectorAll("#chips .chip").forEach(function (item) {
+      item.setAttribute("aria-pressed", item === chip ? "true" : "false");
+    });
+    render();
+  });
+
+  document.getElementById("views").addEventListener("click", function (event) {
+    var button = event.target.closest("[data-view]");
+    if (!button) return;
+    state.view = button.dataset.view;
+    document.querySelectorAll("#views .view-btn").forEach(function (item) {
+      item.setAttribute("aria-pressed", item === button ? "true" : "false");
+    });
+    render();
+  });
+
+  menuBtn.addEventListener("click", function () {
+    var open = mobileNav.dataset.open === "true";
+    mobileNav.dataset.open = open ? "false" : "true";
+    menuBtn.setAttribute("aria-expanded", open ? "false" : "true");
+    menuBtn.setAttribute("aria-label", open ? "Open navigation" : "Close navigation");
+  });
+
+  mobileNav.addEventListener("click", function (event) {
+    if (event.target.closest("a")) {
+      mobileNav.dataset.open = "false";
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.setAttribute("aria-label", "Open navigation");
+    }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
